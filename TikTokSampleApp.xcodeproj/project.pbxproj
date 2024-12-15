@@ -34,6 +34,7 @@
 		E333C7912D0F00450062FDA0 /* CustomCommentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E333C7902D0F00450062FDA0 /* CustomCommentView.xib */; };
 		E333C7932D0F03290062FDA0 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E333C7922D0F03290062FDA0 /* UIViewExtension.swift */; };
 		E333C7952D0F04DA0062FDA0 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E333C7942D0F04DA0062FDA0 /* UIViewControllerExtension.swift */; };
+		E333C7A12D0F0C410062FDA0 /* TimerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E333C7A02D0F0C410062FDA0 /* TimerService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		E333C7902D0F00450062FDA0 /* CustomCommentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCommentView.xib; sourceTree = "<group>"; };
 		E333C7922D0F03290062FDA0 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		E333C7942D0F04DA0062FDA0 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		E333C7A02D0F0C410062FDA0 /* TimerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,30 +137,22 @@
 		E333C73E2D0ED5650062FDA0 /* TikTokSampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				E333C79F2D0F0AB90062FDA0 /* JSONFiles */,
+				E333C79E2D0F0AA50062FDA0 /* Services */,
+				E333C79D2D0F0A850062FDA0 /* CustomViews */,
+				E333C79C2D0F0A5C0062FDA0 /* ViewController */,
+				E333C79B2D0F0A500062FDA0 /* ViewModel */,
+				E333C79A2D0F0A3D0062FDA0 /* Model */,
+				E333C7992D0F0A2F0062FDA0 /* Constants */,
+				E333C7982D0F0A180062FDA0 /* CollectionViewCells */,
+				E333C7972D0F09FA0062FDA0 /* TableViewCells */,
+				E333C7962D0F09D90062FDA0 /* Extensions */,
 				E333C73F2D0ED5650062FDA0 /* AppDelegate.swift */,
 				E333C7412D0ED5650062FDA0 /* SceneDelegate.swift */,
-				E333C7432D0ED5650062FDA0 /* ViewController.swift */,
 				E333C7452D0ED5650062FDA0 /* Main.storyboard */,
 				E333C7482D0ED5650062FDA0 /* Assets.xcassets */,
 				E333C74A2D0ED5650062FDA0 /* LaunchScreen.storyboard */,
 				E333C74D2D0ED5650062FDA0 /* Info.plist */,
-				E333C76F2D0ED6ED0062FDA0 /* TikTokCollectionViewCell.swift */,
-				E333C7702D0ED6ED0062FDA0 /* TikTokCollectionViewCell.xib */,
-				E333C7732D0ED89F0062FDA0 /* VideoData.json */,
-				E333C7752D0ED8D70062FDA0 /* CommentData.json */,
-				E333C7772D0ED9370062FDA0 /* String.swift */,
-				E333C7792D0ED9FF0062FDA0 /* VideoService.swift */,
-				E333C77B2D0EDAF50062FDA0 /* VideoModelData.swift */,
-				E333C77E2D0EDB0F0062FDA0 /* CommentModelData.swift */,
-				E333C7812D0EE0D10062FDA0 /* TikTokViewModel.swift */,
-				E333C7832D0EE3490062FDA0 /* CommonError.swift */,
-				E333C7882D0EEDC20062FDA0 /* CommentsTableViewCell.swift */,
-				E333C7892D0EEDC20062FDA0 /* CommentsTableViewCell.xib */,
-				E333C78C2D0EF2310062FDA0 /* UIImageExtension.swift */,
-				E333C78E2D0F00360062FDA0 /* CustomCommentView.swift */,
-				E333C7902D0F00450062FDA0 /* CustomCommentView.xib */,
-				E333C7922D0F03290062FDA0 /* UIViewExtension.swift */,
-				E333C7942D0F04DA0062FDA0 /* UIViewControllerExtension.swift */,
 			);
 			path = TikTokSampleApp;
 			sourceTree = "<group>";
@@ -178,6 +172,95 @@
 				E333C7622D0ED5660062FDA0 /* TikTokSampleAppUITestsLaunchTests.swift */,
 			);
 			path = TikTokSampleAppUITests;
+			sourceTree = "<group>";
+		};
+		E333C7962D0F09D90062FDA0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E333C7942D0F04DA0062FDA0 /* UIViewControllerExtension.swift */,
+				E333C7922D0F03290062FDA0 /* UIViewExtension.swift */,
+				E333C78C2D0EF2310062FDA0 /* UIImageExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E333C7972D0F09FA0062FDA0 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				E333C7892D0EEDC20062FDA0 /* CommentsTableViewCell.xib */,
+				E333C7882D0EEDC20062FDA0 /* CommentsTableViewCell.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		E333C7982D0F0A180062FDA0 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				E333C7702D0ED6ED0062FDA0 /* TikTokCollectionViewCell.xib */,
+				E333C76F2D0ED6ED0062FDA0 /* TikTokCollectionViewCell.swift */,
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		E333C7992D0F0A2F0062FDA0 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				E333C7772D0ED9370062FDA0 /* String.swift */,
+				E333C7832D0EE3490062FDA0 /* CommonError.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		E333C79A2D0F0A3D0062FDA0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E333C77B2D0EDAF50062FDA0 /* VideoModelData.swift */,
+				E333C77E2D0EDB0F0062FDA0 /* CommentModelData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E333C79B2D0F0A500062FDA0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E333C7812D0EE0D10062FDA0 /* TikTokViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E333C79C2D0F0A5C0062FDA0 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E333C7432D0ED5650062FDA0 /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		E333C79D2D0F0A850062FDA0 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				E333C7902D0F00450062FDA0 /* CustomCommentView.xib */,
+				E333C78E2D0F00360062FDA0 /* CustomCommentView.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		E333C79E2D0F0AA50062FDA0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E333C7792D0ED9FF0062FDA0 /* VideoService.swift */,
+				E333C7A02D0F0C410062FDA0 /* TimerService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E333C79F2D0F0AB90062FDA0 /* JSONFiles */ = {
+			isa = PBXGroup;
+			children = (
+				E333C7752D0ED8D70062FDA0 /* CommentData.json */,
+				E333C7732D0ED89F0062FDA0 /* VideoData.json */,
+			);
+			path = JSONFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,6 +420,7 @@
 				E333C77F2D0EDB0F0062FDA0 /* CommentModelData.swift in Sources */,
 				E333C78A2D0EEDC20062FDA0 /* CommentsTableViewCell.swift in Sources */,
 				E333C78D2D0EF2310062FDA0 /* UIImageExtension.swift in Sources */,
+				E333C7A12D0F0C410062FDA0 /* TimerService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

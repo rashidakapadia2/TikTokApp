@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     var viewModel: TikTokViewModelType = TikTokViewModel()
+    let timerManager = TimerManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +31,12 @@ class ViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        setupTimer()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        timerManager.stopTimer()
     }
     
     func addTapGesture() {
@@ -42,6 +48,16 @@ class ViewController: UIViewController {
     @objc func showHeart() {
         
     }
+    
+    func setupTimer() {
+        timerManager.delegate = self
+        timerManager.startTimer(interval: 2)
+    }
+    
+    func scrollTableViewCell() {
+        guard let visibleCell = tableView.visibleCells.last, let indexpath = tableView.indexPath(for: visibleCell), indexpath.row + 1 < viewModel.comments?.count ?? 0 else { return }
+        tableView.scrollToRow(at: IndexPath(row: indexpath.row + 1, section: 0), at: .bottom, animated: true)
+    }
 
     func setupUI() {
         customCommentView.delegate = self
@@ -51,6 +67,7 @@ class ViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: StringConstants.CommentsTableViewCell, bundle: nil), forCellReuseIdentifier: StringConstants.CommentsTableViewCell)
+        collectionView.contentInsetAdjustmentBehavior = .never
     }
     
     func fetchData() {
@@ -122,8 +139,13 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return cell ?? UITableViewCell()
     }
     
+    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as? CommentsTableViewCell
+        cell?.userImg.layer.cornerRadius = (cell?.userImg.frame.height ?? 0)/2
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 40
+        return 35
     }
 }
 
@@ -134,5 +156,11 @@ extension ViewController: CustomCommentViewDelegate {
     
     func beginEditing() {
         
+    }
+}
+
+extension ViewController: TimerDelegate {
+    func timerDidFire() {
+        scrollTableViewCell()
     }
 }

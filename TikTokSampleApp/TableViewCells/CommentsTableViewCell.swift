@@ -23,12 +23,10 @@ class CommentsTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        
     }
     
     func setupUI() {
-        userImg.layer.cornerRadius = userImg.frame.width/2
+        userImg.layer.cornerRadius = userImg.frame.height/2
         userImg.clipsToBounds = true
     }
     
@@ -41,5 +39,4 @@ class CommentsTableViewCell: UITableViewCell {
             }
         })
     }
-    
 }
