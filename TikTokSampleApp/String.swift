@@ -10,5 +10,6 @@ import Foundation
 struct StringConstants {
     static let TikTokCollectionViewCell = "TikTokCollectionViewCell"
     static let ViewController = "ViewController"
-//    static let
+    static let VideoData = "VideoData"
+    static let CommentData = "CommentData"
 }

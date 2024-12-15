@@ -77,6 +77,16 @@
                 <constraint firstAttribute="bottom" secondItem="Zyb-id-A7k" secondAttribute="bottom" id="hXU-cW-omR"/>
             </constraints>
             <size key="customSize" width="337" height="572"/>
+            <connections>
+                <outlet property="bgView" destination="Zyb-id-A7k" id="68l-Wz-xjD"/>
+                <outlet property="countLbl" destination="dPR-ft-uGZ" id="jSU-3j-4PL"/>
+                <outlet property="horizontalStack" destination="2iJ-Sr-Ixn" id="5r9-yR-6n7"/>
+                <outlet property="imgView" destination="VI8-SQ-ZJW" id="Mnj-y6-Kpa"/>
+                <outlet property="nameLbl" destination="iWZ-P9-IfV" id="X0w-ns-c8W"/>
+                <outlet property="personStack" destination="wug-zR-HEQ" id="uPg-PL-aZj"/>
+                <outlet property="rightStack" destination="xyx-iP-70d" id="cuB-rJ-1Sx"/>
+                <outlet property="viewersLbl" destination="Pip-V1-B3L" id="eo3-7C-JkJ"/>
+            </connections>
             <point key="canvasLocation" x="281.67938931297709" y="203.52112676056339"/>
         </collectionViewCell>
     </objects>

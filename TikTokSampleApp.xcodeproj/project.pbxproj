@@ -24,6 +24,8 @@
 		E333C77A2D0ED9FF0062FDA0 /* VideoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E333C7792D0ED9FF0062FDA0 /* VideoService.swift */; };
 		E333C77D2D0EDAF50062FDA0 /* VideoModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E333C77B2D0EDAF50062FDA0 /* VideoModelData.swift */; };
 		E333C77F2D0EDB0F0062FDA0 /* CommentModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E333C77E2D0EDB0F0062FDA0 /* CommentModelData.swift */; };
+		E333C7822D0EE0D10062FDA0 /* TikTokViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E333C7812D0EE0D10062FDA0 /* TikTokViewModel.swift */; };
+		E333C7842D0EE3490062FDA0 /* CommonError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E333C7832D0EE3490062FDA0 /* CommonError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		E333C7792D0ED9FF0062FDA0 /* VideoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoService.swift; sourceTree = "<group>"; };
 		E333C77C2D0EDAF50062FDA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Base; path = Base.lproj/VideoModelData.swift; sourceTree = "<group>"; };
 		E333C77E2D0EDB0F0062FDA0 /* CommentModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentModelData.swift; sourceTree = "<group>"; };
+		E333C7812D0EE0D10062FDA0 /* TikTokViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TikTokViewModel.swift; sourceTree = "<group>"; };
+		E333C7832D0EE3490062FDA0 /* CommonError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +134,8 @@
 				E333C7792D0ED9FF0062FDA0 /* VideoService.swift */,
 				E333C77B2D0EDAF50062FDA0 /* VideoModelData.swift */,
 				E333C77E2D0EDB0F0062FDA0 /* CommentModelData.swift */,
+				E333C7812D0EE0D10062FDA0 /* TikTokViewModel.swift */,
+				E333C7832D0EE3490062FDA0 /* CommonError.swift */,
 			);
 			path = TikTokSampleApp;
 			sourceTree = "<group>";
@@ -286,9 +292,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E333C7442D0ED5650062FDA0 /* ViewController.swift in Sources */,
+				E333C7822D0EE0D10062FDA0 /* TikTokViewModel.swift in Sources */,
 				E333C77D2D0EDAF50062FDA0 /* VideoModelData.swift in Sources */,
 				E333C77A2D0ED9FF0062FDA0 /* VideoService.swift in Sources */,
 				E333C7402D0ED5650062FDA0 /* AppDelegate.swift in Sources */,
+				E333C7842D0EE3490062FDA0 /* CommonError.swift in Sources */,
 				E333C7782D0ED9370062FDA0 /* String.swift in Sources */,
 				E333C7712D0ED6ED0062FDA0 /* TikTokCollectionViewCell.swift in Sources */,
 				E333C7422D0ED5650062FDA0 /* SceneDelegate.swift in Sources */,

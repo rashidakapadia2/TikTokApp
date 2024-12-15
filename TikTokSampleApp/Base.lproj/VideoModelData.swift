@@ -6,3 +6,17 @@
 //
 
 import Foundation
+
+struct VideoData: Codable {
+    let videos: [Video]?
+}
+
+struct Video: Codable {
+    let id, userID: Int?
+    let username: String?
+    let profilePicURL: String?
+    let description, topic: String?
+    let viewers, likes: Int?
+    let video: String?
+    let thumbnail: String?
+}
