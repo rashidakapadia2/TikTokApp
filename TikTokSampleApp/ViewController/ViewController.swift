@@ -167,6 +167,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension ViewController: CustomCommentViewDelegate {
+    func showGiftBox() {
+        showHeart()
+    }
+    
     func endEditing() {
         
     }
@@ -174,6 +178,7 @@ extension ViewController: CustomCommentViewDelegate {
     func beginEditing() {
         
     }
+    
 }
 
 extension ViewController: TimerDelegate {

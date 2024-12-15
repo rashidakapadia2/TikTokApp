@@ -14,4 +14,5 @@ struct StringConstants {
     static let CommentData = "CommentData"
     static let CommentsTableViewCell = "CommentsTableViewCell"
     static let HeartLottie = "HeartLottie"
+    static let GiftLottie = "GiftLottie"
 }

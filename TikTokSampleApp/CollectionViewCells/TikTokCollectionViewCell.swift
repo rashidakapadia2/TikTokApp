@@ -20,9 +20,9 @@ class TikTokCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var personStack: UIStackView!
     @IBOutlet weak var horizontalStack: UIStackView!
     @IBOutlet weak var bgView: UIView!
-    
     @IBOutlet weak var viewerLbl: UILabel!
     @IBOutlet weak var topicLbl: UILabel!
+    
     // MARK: Variables
     private var playerLayer: AVPlayerLayer!
     private var player: AVPlayer?
@@ -54,22 +54,19 @@ class TikTokCollectionViewCell: UICollectionViewCell {
         let asset = AVAsset(url: url)
         let item = AVPlayerItem(asset: asset)
         
-        // Create a new looper for this video
         playerLooper = AVPlayerLooper(player: playerQueue!, templateItem: item)
         
-        // Set the player and prepare for playback
         player = playerQueue
         startPlayback()
     }
     
     func startPlayback() {
         player?.play()
-        player?.isMuted = true
     }
     
     func stopPlayback() {
         player?.pause()
-//        player?.seek(to: .zero)
+        player?.seek(to: .zero)
     }
     
     override func prepareForReuse() {

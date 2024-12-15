@@ -11,6 +11,7 @@ import UIKit
 @MainActor protocol CustomCommentViewDelegate {
     func beginEditing()
     func endEditing()
+    func showGiftBox()
 }
 
 extension CustomCommentViewDelegate {
@@ -54,6 +55,9 @@ extension CustomCommentViewDelegate {
         string: "Comment",
         attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         txtField.delegate = self
+    }
+    @IBAction func giftBtnTapped(_ sender: Any) {
+        delegate?.showGiftBox()
     }
 }
 
