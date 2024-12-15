@@ -26,6 +26,10 @@
 		E333C77F2D0EDB0F0062FDA0 /* CommentModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E333C77E2D0EDB0F0062FDA0 /* CommentModelData.swift */; };
 		E333C7822D0EE0D10062FDA0 /* TikTokViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E333C7812D0EE0D10062FDA0 /* TikTokViewModel.swift */; };
 		E333C7842D0EE3490062FDA0 /* CommonError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E333C7832D0EE3490062FDA0 /* CommonError.swift */; };
+		E333C7872D0EED5E0062FDA0 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = E333C7862D0EED5E0062FDA0 /* Lottie */; };
+		E333C78A2D0EEDC20062FDA0 /* CommentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E333C7882D0EEDC20062FDA0 /* CommentsTableViewCell.swift */; };
+		E333C78B2D0EEDC20062FDA0 /* CommentsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E333C7892D0EEDC20062FDA0 /* CommentsTableViewCell.xib */; };
+		E333C78D2D0EF2310062FDA0 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E333C78C2D0EF2310062FDA0 /* UIImageExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +73,9 @@
 		E333C77E2D0EDB0F0062FDA0 /* CommentModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentModelData.swift; sourceTree = "<group>"; };
 		E333C7812D0EE0D10062FDA0 /* TikTokViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TikTokViewModel.swift; sourceTree = "<group>"; };
 		E333C7832D0EE3490062FDA0 /* CommonError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonError.swift; sourceTree = "<group>"; };
+		E333C7882D0EEDC20062FDA0 /* CommentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsTableViewCell.swift; sourceTree = "<group>"; };
+		E333C7892D0EEDC20062FDA0 /* CommentsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentsTableViewCell.xib; sourceTree = "<group>"; };
+		E333C78C2D0EF2310062FDA0 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E333C7872D0EED5E0062FDA0 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +144,9 @@
 				E333C77E2D0EDB0F0062FDA0 /* CommentModelData.swift */,
 				E333C7812D0EE0D10062FDA0 /* TikTokViewModel.swift */,
 				E333C7832D0EE3490062FDA0 /* CommonError.swift */,
+				E333C7882D0EEDC20062FDA0 /* CommentsTableViewCell.swift */,
+				E333C7892D0EEDC20062FDA0 /* CommentsTableViewCell.xib */,
+				E333C78C2D0EF2310062FDA0 /* UIImageExtension.swift */,
 			);
 			path = TikTokSampleApp;
 			sourceTree = "<group>";
@@ -173,6 +184,9 @@
 			dependencies = (
 			);
 			name = TikTokSampleApp;
+			packageProductDependencies = (
+				E333C7862D0EED5E0062FDA0 /* Lottie */,
+			);
 			productName = TikTokSampleApp;
 			productReference = E333C73C2D0ED5650062FDA0 /* TikTokSampleApp.app */;
 			productType = "com.apple.product-type.application";
@@ -245,6 +259,9 @@
 				Base,
 			);
 			mainGroup = E333C7332D0ED5640062FDA0;
+			packageReferences = (
+				E333C7852D0EED5E0062FDA0 /* XCRemoteSwiftPackageReference "lottie-spm" */,
+			);
 			productRefGroup = E333C73D2D0ED5650062FDA0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -267,6 +284,7 @@
 				E333C7722D0ED6ED0062FDA0 /* TikTokCollectionViewCell.xib in Resources */,
 				E333C7742D0ED89F0062FDA0 /* VideoData.json in Resources */,
 				E333C7472D0ED5650062FDA0 /* Main.storyboard in Resources */,
+				E333C78B2D0EEDC20062FDA0 /* CommentsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +319,8 @@
 				E333C7712D0ED6ED0062FDA0 /* TikTokCollectionViewCell.swift in Sources */,
 				E333C7422D0ED5650062FDA0 /* SceneDelegate.swift in Sources */,
 				E333C77F2D0EDB0F0062FDA0 /* CommentModelData.swift in Sources */,
+				E333C78A2D0EEDC20062FDA0 /* CommentsTableViewCell.swift in Sources */,
+				E333C78D2D0EF2310062FDA0 /* UIImageExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -649,6 +669,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E333C7852D0EED5E0062FDA0 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E333C7862D0EED5E0062FDA0 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E333C7852D0EED5E0062FDA0 /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E333C7342D0ED5640062FDA0 /* Project object */;
 }

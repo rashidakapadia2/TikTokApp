@@ -12,4 +12,5 @@ struct StringConstants {
     static let ViewController = "ViewController"
     static let VideoData = "VideoData"
     static let CommentData = "CommentData"
+    static let CommentsTableViewCell = "CommentsTableViewCell"
 }
