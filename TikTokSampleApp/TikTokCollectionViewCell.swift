@@ -64,6 +64,7 @@ class TikTokCollectionViewCell: UICollectionViewCell {
     
     func startPlayback() {
         player?.play()
+        player?.isMuted = true
     }
     
     func stopPlayback() {
@@ -88,13 +89,15 @@ class TikTokCollectionViewCell: UICollectionViewCell {
     func configData(data: Video?) {
         guard let videoURL = data?.video, let url = URL(string: videoURL) else { return }
         configure(with: url)
-        nameLbl.text = data?.username
+        nameLbl.text = data?.username?.capitalized
         countLbl.text = "Likes:\(data?.likes ?? 0)"
         viewersLbl.text = "Viewers: \(data?.viewers ?? 0)"
         topicLbl.text = data?.topic
         viewerLbl.text = "\(data?.viewers ?? 0)"
-        UIImage.loadURL(fileName: data?.profilePicURL, completion: { img in
-            self.imgView.image = img
+        UIImage.loadURL(fileName: data?.profilePicURL, completion: { [weak self] img in
+            DispatchQueue.main.async {
+                self?.imgView.image = img
+            }
         })
     }
 }

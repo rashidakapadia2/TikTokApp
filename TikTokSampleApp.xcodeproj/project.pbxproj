@@ -30,6 +30,10 @@
 		E333C78A2D0EEDC20062FDA0 /* CommentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E333C7882D0EEDC20062FDA0 /* CommentsTableViewCell.swift */; };
 		E333C78B2D0EEDC20062FDA0 /* CommentsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E333C7892D0EEDC20062FDA0 /* CommentsTableViewCell.xib */; };
 		E333C78D2D0EF2310062FDA0 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E333C78C2D0EF2310062FDA0 /* UIImageExtension.swift */; };
+		E333C78F2D0F00360062FDA0 /* CustomCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E333C78E2D0F00360062FDA0 /* CustomCommentView.swift */; };
+		E333C7912D0F00450062FDA0 /* CustomCommentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E333C7902D0F00450062FDA0 /* CustomCommentView.xib */; };
+		E333C7932D0F03290062FDA0 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E333C7922D0F03290062FDA0 /* UIViewExtension.swift */; };
+		E333C7952D0F04DA0062FDA0 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E333C7942D0F04DA0062FDA0 /* UIViewControllerExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +80,10 @@
 		E333C7882D0EEDC20062FDA0 /* CommentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsTableViewCell.swift; sourceTree = "<group>"; };
 		E333C7892D0EEDC20062FDA0 /* CommentsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentsTableViewCell.xib; sourceTree = "<group>"; };
 		E333C78C2D0EF2310062FDA0 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		E333C78E2D0F00360062FDA0 /* CustomCommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCommentView.swift; sourceTree = "<group>"; };
+		E333C7902D0F00450062FDA0 /* CustomCommentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCommentView.xib; sourceTree = "<group>"; };
+		E333C7922D0F03290062FDA0 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		E333C7942D0F04DA0062FDA0 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +155,10 @@
 				E333C7882D0EEDC20062FDA0 /* CommentsTableViewCell.swift */,
 				E333C7892D0EEDC20062FDA0 /* CommentsTableViewCell.xib */,
 				E333C78C2D0EF2310062FDA0 /* UIImageExtension.swift */,
+				E333C78E2D0F00360062FDA0 /* CustomCommentView.swift */,
+				E333C7902D0F00450062FDA0 /* CustomCommentView.xib */,
+				E333C7922D0F03290062FDA0 /* UIViewExtension.swift */,
+				E333C7942D0F04DA0062FDA0 /* UIViewControllerExtension.swift */,
 			);
 			path = TikTokSampleApp;
 			sourceTree = "<group>";
@@ -285,6 +297,7 @@
 				E333C7742D0ED89F0062FDA0 /* VideoData.json in Resources */,
 				E333C7472D0ED5650062FDA0 /* Main.storyboard in Resources */,
 				E333C78B2D0EEDC20062FDA0 /* CommentsTableViewCell.xib in Resources */,
+				E333C7912D0F00450062FDA0 /* CustomCommentView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,13 +324,16 @@
 			files = (
 				E333C7442D0ED5650062FDA0 /* ViewController.swift in Sources */,
 				E333C7822D0EE0D10062FDA0 /* TikTokViewModel.swift in Sources */,
+				E333C7952D0F04DA0062FDA0 /* UIViewControllerExtension.swift in Sources */,
 				E333C77D2D0EDAF50062FDA0 /* VideoModelData.swift in Sources */,
 				E333C77A2D0ED9FF0062FDA0 /* VideoService.swift in Sources */,
+				E333C7932D0F03290062FDA0 /* UIViewExtension.swift in Sources */,
 				E333C7402D0ED5650062FDA0 /* AppDelegate.swift in Sources */,
 				E333C7842D0EE3490062FDA0 /* CommonError.swift in Sources */,
 				E333C7782D0ED9370062FDA0 /* String.swift in Sources */,
 				E333C7712D0ED6ED0062FDA0 /* TikTokCollectionViewCell.swift in Sources */,
 				E333C7422D0ED5650062FDA0 /* SceneDelegate.swift in Sources */,
+				E333C78F2D0F00360062FDA0 /* CustomCommentView.swift in Sources */,
 				E333C77F2D0EDB0F0062FDA0 /* CommentModelData.swift in Sources */,
 				E333C78A2D0EEDC20062FDA0 /* CommentsTableViewCell.swift in Sources */,
 				E333C78D2D0EF2310062FDA0 /* UIImageExtension.swift in Sources */,

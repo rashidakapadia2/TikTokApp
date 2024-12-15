@@ -11,6 +11,7 @@ import AVFoundation
 class ViewController: UIViewController {
 
     // MARK: IBOutlets
+    @IBOutlet weak var customCommentView: CustomCommentView!
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -22,14 +23,28 @@ class ViewController: UIViewController {
         setupUI()
         fetchData()
         fetchComments()
+        addKeyboardObserver()
+        hideKeyboardWhenTappedAround()
+        addTapGesture()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
     }
+    
+    func addTapGesture() {
+        let tapToOpen = UITapGestureRecognizer(target: self, action: #selector(showHeart))
+        tapToOpen.numberOfTapsRequired = 2
+        self.view.addGestureRecognizer(tapToOpen)
+    }
+    
+    @objc func showHeart() {
+        
+    }
 
     func setupUI() {
+        customCommentView.delegate = self
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: StringConstants.TikTokCollectionViewCell, bundle: nil), forCellWithReuseIdentifier: StringConstants.TikTokCollectionViewCell)
@@ -43,7 +58,7 @@ class ViewController: UIViewController {
             try viewModel.fetchVideos()
             collectionView.reloadData()
         } catch (let err) {
-            print(err)
+            showToast(message: err.localizedDescription)
         }
     }
     func fetchComments() {
@@ -51,7 +66,7 @@ class ViewController: UIViewController {
             try viewModel.fetchComments()
             tableView.reloadData()
         } catch (let err) {
-            print(err)
+            showToast(message: err.localizedDescription)
         }
     }
 }
@@ -105,5 +120,19 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         cell?.setupUI()
         cell?.configData(comment: viewModel.comments?[indexPath.item])
         return cell ?? UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 40
+    }
+}
+
+extension ViewController: CustomCommentViewDelegate {
+    func endEditing() {
+        
+    }
+    
+    func beginEditing() {
+        
     }
 }

@@ -35,8 +35,10 @@ class CommentsTableViewCell: UITableViewCell {
     func configData(comment: Comment?) {
         userNameLbl.text = comment?.username
         commentLbl.text = comment?.comment
-        UIImage.loadURL(fileName: comment?.picURL, completion: { img in
-            self.userImg.image = img
+        UIImage.loadURL(fileName: comment?.picURL, completion: { [weak self] img in
+            DispatchQueue.main.async {
+                self?.userImg.image = img
+            }
         })
     }
     
