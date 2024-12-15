@@ -16,6 +16,14 @@
 		E333C7572D0ED5660062FDA0 /* TikTokSampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E333C7562D0ED5660062FDA0 /* TikTokSampleAppTests.swift */; };
 		E333C7612D0ED5660062FDA0 /* TikTokSampleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E333C7602D0ED5660062FDA0 /* TikTokSampleAppUITests.swift */; };
 		E333C7632D0ED5660062FDA0 /* TikTokSampleAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E333C7622D0ED5660062FDA0 /* TikTokSampleAppUITestsLaunchTests.swift */; };
+		E333C7712D0ED6ED0062FDA0 /* TikTokCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E333C76F2D0ED6ED0062FDA0 /* TikTokCollectionViewCell.swift */; };
+		E333C7722D0ED6ED0062FDA0 /* TikTokCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E333C7702D0ED6ED0062FDA0 /* TikTokCollectionViewCell.xib */; };
+		E333C7742D0ED89F0062FDA0 /* VideoData.json in Resources */ = {isa = PBXBuildFile; fileRef = E333C7732D0ED89F0062FDA0 /* VideoData.json */; };
+		E333C7762D0ED8D70062FDA0 /* CommentData.json in Resources */ = {isa = PBXBuildFile; fileRef = E333C7752D0ED8D70062FDA0 /* CommentData.json */; };
+		E333C7782D0ED9370062FDA0 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E333C7772D0ED9370062FDA0 /* String.swift */; };
+		E333C77A2D0ED9FF0062FDA0 /* VideoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E333C7792D0ED9FF0062FDA0 /* VideoService.swift */; };
+		E333C77D2D0EDAF50062FDA0 /* VideoModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E333C77B2D0EDAF50062FDA0 /* VideoModelData.swift */; };
+		E333C77F2D0EDB0F0062FDA0 /* CommentModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E333C77E2D0EDB0F0062FDA0 /* CommentModelData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +57,14 @@
 		E333C75C2D0ED5660062FDA0 /* TikTokSampleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TikTokSampleAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E333C7602D0ED5660062FDA0 /* TikTokSampleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TikTokSampleAppUITests.swift; sourceTree = "<group>"; };
 		E333C7622D0ED5660062FDA0 /* TikTokSampleAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TikTokSampleAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E333C76F2D0ED6ED0062FDA0 /* TikTokCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TikTokCollectionViewCell.swift; sourceTree = "<group>"; };
+		E333C7702D0ED6ED0062FDA0 /* TikTokCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TikTokCollectionViewCell.xib; sourceTree = "<group>"; };
+		E333C7732D0ED89F0062FDA0 /* VideoData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = VideoData.json; sourceTree = "<group>"; };
+		E333C7752D0ED8D70062FDA0 /* CommentData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CommentData.json; sourceTree = "<group>"; };
+		E333C7772D0ED9370062FDA0 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		E333C7792D0ED9FF0062FDA0 /* VideoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoService.swift; sourceTree = "<group>"; };
+		E333C77C2D0EDAF50062FDA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Base; path = Base.lproj/VideoModelData.swift; sourceTree = "<group>"; };
+		E333C77E2D0EDB0F0062FDA0 /* CommentModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentModelData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +122,14 @@
 				E333C7482D0ED5650062FDA0 /* Assets.xcassets */,
 				E333C74A2D0ED5650062FDA0 /* LaunchScreen.storyboard */,
 				E333C74D2D0ED5650062FDA0 /* Info.plist */,
+				E333C76F2D0ED6ED0062FDA0 /* TikTokCollectionViewCell.swift */,
+				E333C7702D0ED6ED0062FDA0 /* TikTokCollectionViewCell.xib */,
+				E333C7732D0ED89F0062FDA0 /* VideoData.json */,
+				E333C7752D0ED8D70062FDA0 /* CommentData.json */,
+				E333C7772D0ED9370062FDA0 /* String.swift */,
+				E333C7792D0ED9FF0062FDA0 /* VideoService.swift */,
+				E333C77B2D0EDAF50062FDA0 /* VideoModelData.swift */,
+				E333C77E2D0EDB0F0062FDA0 /* CommentModelData.swift */,
 			);
 			path = TikTokSampleApp;
 			sourceTree = "<group>";
@@ -232,7 +256,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E333C74C2D0ED5650062FDA0 /* LaunchScreen.storyboard in Resources */,
+				E333C7762D0ED8D70062FDA0 /* CommentData.json in Resources */,
 				E333C7492D0ED5650062FDA0 /* Assets.xcassets in Resources */,
+				E333C7722D0ED6ED0062FDA0 /* TikTokCollectionViewCell.xib in Resources */,
+				E333C7742D0ED89F0062FDA0 /* VideoData.json in Resources */,
 				E333C7472D0ED5650062FDA0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,8 +286,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E333C7442D0ED5650062FDA0 /* ViewController.swift in Sources */,
+				E333C77D2D0EDAF50062FDA0 /* VideoModelData.swift in Sources */,
+				E333C77A2D0ED9FF0062FDA0 /* VideoService.swift in Sources */,
 				E333C7402D0ED5650062FDA0 /* AppDelegate.swift in Sources */,
+				E333C7782D0ED9370062FDA0 /* String.swift in Sources */,
+				E333C7712D0ED6ED0062FDA0 /* TikTokCollectionViewCell.swift in Sources */,
 				E333C7422D0ED5650062FDA0 /* SceneDelegate.swift in Sources */,
+				E333C77F2D0EDB0F0062FDA0 /* CommentModelData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +343,14 @@
 				E333C74B2D0ED5650062FDA0 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		E333C77B2D0EDAF50062FDA0 /* VideoModelData.swift */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E333C77C2D0EDAF50062FDA0 /* Base */,
+			);
+			name = VideoModelData.swift;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
