@@ -7,6 +7,7 @@
 
 import UIKit
 import AVFoundation
+import Lottie
 
 class ViewController: UIViewController {
 
@@ -18,6 +19,7 @@ class ViewController: UIViewController {
     
     var viewModel: TikTokViewModelType = TikTokViewModel()
     let timerManager = TimerManager()
+    var animationView: LottieAnimationView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +29,7 @@ class ViewController: UIViewController {
         addKeyboardObserver()
         hideKeyboardWhenTappedAround()
         addTapGesture()
+        makeLottieAnimation()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -45,8 +48,22 @@ class ViewController: UIViewController {
         self.view.addGestureRecognizer(tapToOpen)
     }
     
+    func makeLottieAnimation() {
+        animationView = LottieAnimationView(name: StringConstants.HeartLottie)
+        guard let animationView else { return }
+        self.view.addSubview(animationView)
+        animationView.translatesAutoresizingMaskIntoConstraints = false
+        animationView.leadingAnchor.constraint(equalTo: self.tableView.centerXAnchor).isActive = true
+        animationView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+        animationView.heightAnchor.constraint(equalToConstant: self.tableView.frame.height*1.5).isActive = true
+        animationView.bottomAnchor.constraint(equalTo: self.tableView.bottomAnchor).isActive = true
+        animationView.contentMode = .scaleAspectFit
+    }
+    
     @objc func showHeart() {
-        
+        DispatchQueue.main.async {
+            self.animationView?.play()
+        }
     }
     
     func setupTimer() {
